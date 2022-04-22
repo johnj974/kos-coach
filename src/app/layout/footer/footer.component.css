@@ -1,0 +1,30 @@
+.container-fluid {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.address > p {
+  margin: 0;
+}
+
+ul > li {
+  list-style: none;
+}
+
+.company-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.fa {
+  color: rgb(204, 0, 0);
+}
+
+@media screen and (max-width: 769px) {
+  .company-info {
+    align-items: center;
+  }
+}

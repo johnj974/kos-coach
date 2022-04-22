@@ -4,3 +4,17 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+:root {
+  --dark: hsl(0, 0%, 16%);
+  --red: hsl(0, 100%, 50%);
+  --dark-red: hsl(0, 100%, 40%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+.kos-btn {
+  background-color: var(--dark-red);
+  color: var(--white);
+  border: none;
+}

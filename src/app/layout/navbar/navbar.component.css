@@ -1,11 +1,11 @@
 .navbar {
   color: white;
-  background-image: linear-gradient(to right, red, black);
+  background-image: linear-gradient(to right, var(--dark-red), var(--black));
 }
 
 li > a.nav-link {
   font-size: 1.2rem;
-  color: white;
+  color: var(--white);
 }
 
 /* Navbar Toggler Colour Change */
@@ -14,7 +14,7 @@ li > a.nav-link {
 }
 
 .navbar-toggler {
-  border: 2px solid red;
+  border: 2px solid var(--dark-red);
 }
 
 /* Navbar Selected Link Animated Border */
@@ -24,7 +24,7 @@ nav a::after {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: red;
+  background-color: var(--dark-red);
   width: 0%;
   transition: all ease-in-out 250ms;
 }
@@ -43,7 +43,7 @@ nav a.active::after {
     width: 0%;
   }
   li > a.nav-link.active {
-    color: black;
+    color: var(--black);
     font-weight: bold;
   }
 } ;
