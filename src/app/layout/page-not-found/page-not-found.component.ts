@@ -8,28 +8,25 @@ import { Router } from '@angular/router';
 })
 export class PageNotFoundComponent implements OnInit {
   //.
+  lostMessage = `It Appears That Your Sat-Nav Is misinformed, Do Not be alarmed, Please
+  choose from our existing routes.`;
   message = "We're not lost, I know exactly where we are.";
   pageNotFoundExits = ['Home', 'Services', 'About', 'Contact'];
 
-  toHomePage() {
-    this.router.navigate(['']);
+  toPage(data: string) {
+    if (data === 'Home') {
+      this.router.navigate(['']);
+    } else {
+      this.router.navigate([`/${data.toLowerCase()}`]);
+    }
   }
 
-  toServicePage() {
-    this.router.navigate(['/services']);
-  }
-
-  toAboutPage() {
-    this.router.navigate(['/about']);
-  }
-
-  toContactPage() {
-    this.router.navigate(['/contact']);
-  }
-
-  changeMessage() {
-    this.message = 'Okay, I admit it, we are lost';
-    console.log('working');
+  changeMessage(data: string) {
+    if (data === 'lost') {
+      this.message = 'Okay, I admit it, we are lost';
+    } else if (data === 'not-lost') {
+      this.message = "We're not lost, I know exactly where we are.";
+    }
   }
   constructor(private router: Router) {}
 
