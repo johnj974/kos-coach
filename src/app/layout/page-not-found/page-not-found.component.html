@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>
+        It Appears That Your Sat-Nav Is misinformed, Do Not be alarmed, Please
+        choose from our existing routes
+      </h3>
+    </div>
+    <div class="col-md-4 dark" (click)="toHomePage()">
+      <h3 class="display-4">Home</h3>
+    </div>
+    <div class="col-md-4 red" (click)="toServicePage()">
+      <h3 class="display-4">Services</h3>
+    </div>
+    <div class="col-md-4 dark" (click)="toAboutPage()">
+      <h3 class="display-4">About</h3>
+    </div>
+    <div class="col-md-4 red" (click)="toContactPage()">
+      <h3 class="display-4">Contact</h3>
+    </div>
+    <div class="col-md-4" (mouseenter)="changeMessage()">
+      <h3>{{ message }}</h3>
+    </div>
+  </div>
+</div>
