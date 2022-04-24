@@ -1,6 +1,6 @@
 .navbar {
   color: white;
-  background-image: linear-gradient(to right, var(--dark-red), var(--black));
+  background-image: linear-gradient(to right, var(--dark-red), var(--dark));
 }
 
 li > a.nav-link {
