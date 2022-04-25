@@ -7,22 +7,22 @@
 .dark {
   background-color: var(--dark);
   color: var(--white);
+  transition: background-color ease-in-out 1s;
 }
 
 .dark:hover {
   background-color: var(--dark-red);
-  transition: background-color ease-in-out 1s;
   cursor: pointer;
 }
 
 .red {
   background-color: var(--dark-red);
   color: var(--white);
+  transition: background-color ease-in-out 1s;
 }
 
 .red:hover {
   background-color: var(--dark);
-  transition: background-color ease-in-out 1s;
   cursor: pointer;
 }
 

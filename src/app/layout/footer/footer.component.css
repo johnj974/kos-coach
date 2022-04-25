@@ -1,6 +1,7 @@
 .container-fluid {
   background-color: var(--dark);
   color: var(--white);
+  border-top: 2px solid var(--dark-red);
 }
 
 .address > p {
@@ -20,7 +21,7 @@ ul > li {
 }
 
 .fa {
-  color: rgb(204, 0, 0);
+  color: var(--white);
 }
 
 @media screen and (max-width: 769px) {

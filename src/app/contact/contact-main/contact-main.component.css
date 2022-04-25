@@ -1,5 +1,6 @@
 section {
-  background: linear-gradient(to right, var(--dark-red), var(--dark));
+  /* background: linear-gradient(to right, var(--dark-red), var(--dark)); */
+  background-color: var(--dark);
   height: 100%;
 }
 
