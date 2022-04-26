@@ -1,105 +1,115 @@
-<div class="container py-5">
+<div class="container">
   <div class="row">
     <div class="col">
       <h3 class="display-5">Contact Form</h3>
-      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            formControlName="name"
-            placeholder="Name"
-          />
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('name').valid && contactForm.get('name').touched
-            "
-          >
-            - Please enter a valid name.
-          </span>
-        </div>
+      <h3 *ngIf="formSubmitted; else form">
+        Thank You {{ contactForm.value.name | titlecase }} for your interest in
+        {{ contactForm.value.service }}, we look forward to meeting you.
+      </h3>
+      <ng-template #form>
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              placeholder="Name"
+            />
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('name').valid &&
+                contactForm.get('name').touched
+              "
+            >
+              - Please enter a valid name.
+            </span>
+          </div>
 
-        <div class="mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            formControlName="email"
-            placeholder="email"
-          />
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('email').valid &&
-              contactForm.get('email').touched
-            "
-          >
-            - Please enter a valid email.
-          </span>
-        </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+              placeholder="email"
+            />
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('email').valid &&
+                contactForm.get('email').touched
+              "
+            >
+              - Please enter a valid email.
+            </span>
+          </div>
 
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="phone"
-            formControlName="phone"
-            placeholder="phone"
-          />
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('phone').valid &&
-              contactForm.get('phone').touched
-            "
-          >
-            - Please enter a valid 9 digit phone number.
-          </span>
-        </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              formControlName="phone"
+              placeholder="phone"
+            />
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('phone').valid &&
+                contactForm.get('phone').touched
+              "
+            >
+              - Please enter a valid 9 digit phone number.
+            </span>
+          </div>
 
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="service"
-            formControlName="service"
-            placeholder="service"
-          />
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('service').valid &&
-              contactForm.get('service').touched
-            "
-          >
-            - Please enter a valid service.
-          </span>
-        </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="service"
+              formControlName="service"
+              placeholder="service"
+            />
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('service').valid &&
+                contactForm.get('service').touched
+              "
+            >
+              - Please enter a valid service.
+            </span>
+          </div>
 
-        <div class="mb-3">
-          <textarea
-            type="text"
-            class="form-control"
-            id="message"
-            formControlName="message"
-            placeholder="Message"
-            rows="6"
-          ></textarea>
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('message').valid &&
-              contactForm.get('message').touched
-            "
-          >
-            - Please enter a valid message.
-          </span>
-        </div>
+          <div class="mb-3">
+            <textarea
+              type="text"
+              class="form-control"
+              id="message"
+              formControlName="message"
+              placeholder="Message"
+              rows="6"
+            ></textarea>
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('message').valid &&
+                contactForm.get('message').touched
+              "
+            >
+              - Please enter a valid message.
+            </span>
+          </div>
 
-        <button class="kos-btn">Send</button>
-      </form>
+          <button class="kos-btn">Send</button>
+          <span class="form-text small" *ngIf="isFormInValid">
+            - Please fill in all input fields.
+          </span>
+        </form>
+      </ng-template>
     </div>
   </div>
 </div>

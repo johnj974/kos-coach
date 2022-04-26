@@ -30,3 +30,15 @@ li a {
 li a:hover {
   color: var(--white);
 }
+
+@media screen and (max-width: 768px) {
+  .row {
+    text-align: center;
+  }
+  .external-links {
+    width: 100%;
+  }
+  .electronic-contact {
+    width: 100%;
+  }
+}

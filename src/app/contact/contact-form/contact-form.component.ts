@@ -9,13 +9,25 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
   //.
   contactForm: FormGroup;
+  isFormInValid = false;
+  formSubmitted = false;
 
   submitForm() {
-    console.log(this.contactForm);
+    if (this.contactForm.status === 'INVALID') {
+      this.isFormInValid = true;
+      setTimeout(() => {
+        this.isFormInValid = false;
+      }, 5000);
+      return;
+    } else {
+      console.log(this.contactForm);
+      this.formSubmitted = true;
 
-    setTimeout(() => {
-      this.contactForm.reset();
-    }, 5000);
+      setTimeout(() => {
+        this.contactForm.reset();
+        this.formSubmitted = false;
+      }, 10000);
+    }
   }
   constructor() {}
 

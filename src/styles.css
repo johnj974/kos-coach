@@ -13,8 +13,26 @@
   --black: hsl(0, 0%, 0%);
 }
 
+.container {
+  padding: 1rem;
+}
+
 .kos-btn {
   background-color: var(--dark-red);
   color: var(--white);
   border: none;
+  transition: background-color, color, 2s;
+  padding: 0.5rem 1.5em;
+  display: block;
+}
+
+.kos-btn:hover {
+  background-color: var(--white);
+  color: var(--dark-red);
+}
+
+@media screen and (max-width: 768px) {
+  .kos-btn {
+    margin: 0 auto;
+  }
 }
