@@ -6,16 +6,9 @@ import { AboutMainComponent } from './about-main/about-main.component';
 import { AboutIntroComponent } from './about-intro/about-intro.component';
 import { AboutFleetComponent } from './about-fleet/about-fleet.component';
 
-
 @NgModule({
-  declarations: [
-    AboutMainComponent,
-    AboutIntroComponent,
-    AboutFleetComponent
-  ],
-  imports: [
-    CommonModule,
-    AboutRoutingModule
-  ]
+  declarations: [AboutMainComponent, AboutIntroComponent, AboutFleetComponent],
+  imports: [CommonModule, AboutRoutingModule],
+  exports: [AboutIntroComponent],
 })
-export class AboutModule { }
+export class AboutModule {}

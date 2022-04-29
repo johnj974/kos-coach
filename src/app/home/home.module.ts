@@ -3,23 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeHomeComponent } from './home-home/home-home.component';
-import { HomeAboutComponent } from './home-about/home-about.component';
+
 import { HomeToursComponent } from './home-tours/home-tours.component';
 import { HomeGolfComponent } from './home-golf/home-golf.component';
 import { FleetComponent } from './fleet/fleet.component';
-
+import { AboutModule } from '../about/about.module';
 
 @NgModule({
   declarations: [
     HomeHomeComponent,
-    HomeAboutComponent,
+
     HomeToursComponent,
     HomeGolfComponent,
-    FleetComponent
+    FleetComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  imports: [CommonModule, HomeRoutingModule, AboutModule],
 })
-export class HomeModule { }
+export class HomeModule {}
