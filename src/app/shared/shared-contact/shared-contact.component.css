@@ -1,0 +1,20 @@
+.container-fluid {
+  height: 400px;
+  background-image: linear-gradient(to right, var(--dark-red), var(--black));
+}
+
+.container {
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+h3,
+p {
+  color: white;
+}

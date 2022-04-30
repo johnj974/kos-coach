@@ -24,6 +24,11 @@ ul > li {
   color: var(--white);
 }
 
+.kos-btn:hover {
+  background-color: var(--white);
+  color: var(--dark-red);
+}
+
 @media screen and (max-width: 769px) {
   .company-info {
     align-items: center;

@@ -27,8 +27,8 @@
 }
 
 .kos-btn:hover {
-  background-color: var(--white);
-  color: var(--dark-red);
+  background-color: var(--dark);
+  /* color: var(--dark-red); */
 }
 
 @media screen and (max-width: 768px) {

@@ -8,6 +8,7 @@ import { HomeToursComponent } from './home-tours/home-tours.component';
 import { HomeGolfComponent } from './home-golf/home-golf.component';
 import { FleetComponent } from './fleet/fleet.component';
 import { AboutModule } from '../about/about.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { AboutModule } from '../about/about.module';
     HomeGolfComponent,
     FleetComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, AboutModule],
+  imports: [CommonModule, HomeRoutingModule, AboutModule, SharedModule],
 })
 export class HomeModule {}

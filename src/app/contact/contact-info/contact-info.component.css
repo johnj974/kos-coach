@@ -28,7 +28,7 @@ li a {
 }
 
 li a:hover {
-  color: var(--white);
+  color: var(--dark);
 }
 
 @media screen and (max-width: 768px) {
