@@ -1,6 +1,7 @@
 .container-fluid {
   height: 400px;
-  background-image: linear-gradient(to right, var(--dark-red), var(--black));
+  /* background-image: linear-gradient(to right, var(--dark-red), var(--black)); */
+  background-color: var(--dark);
 }
 
 .container {

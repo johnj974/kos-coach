@@ -24,11 +24,13 @@
   transition: background-color, color, 2s;
   padding: 0.5rem 1.5em;
   display: block;
+  border: 2px solid transparent;
 }
 
 .kos-btn:hover {
   background-color: var(--dark);
   /* color: var(--dark-red); */
+  border: 2px solid var(--dark-red);
 }
 
 @media screen and (max-width: 768px) {

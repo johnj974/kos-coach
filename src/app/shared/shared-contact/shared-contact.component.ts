@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shared-contact',
@@ -9,9 +10,9 @@ export class SharedContactComponent implements OnInit {
   //.
 
   toContact() {
-    //. nav logic
+    this.router.navigate(['contact']);
   }
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 }
