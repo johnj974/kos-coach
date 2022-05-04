@@ -13,21 +13,21 @@ export class ToursService {
       'A day excursion around the ring of kerry',
       'a day excursion around the ring of kerry',
       100,
-      'another-white-bus'
+      'explore2'
     ),
     new ToursModel(
       'Cliffs of Moher ',
       'A day excursion around the cliffs of moher',
       'a day excursion around the cliffs of moher',
       70,
-      'another-white-bus'
+      'coast'
     ),
     new ToursModel(
       'Slea Head ',
       'A day excursion around the Slea Head',
       'a day excursion around the Slea Head',
       70,
-      'another-white-bus'
+      'church'
     ),
   ];
 

@@ -1,9 +1,11 @@
 <div class="container">
+  <h3 class="display-5">Happy Customers</h3>
   <div class="row">
-    <div class="col">
-      <p *ngFor="let customer of customers">
-        {{ customer.email }}
-      </p>
+    <div class="col-lg-4" *ngFor="let customer of customers; let i = index">
+      <div *ngIf="i < 3" class="customer-display">
+        <p>{{ customer.body }}</p>
+        <h5><span>-</span>{{ customer.email | splitLast: "@" }}</h5>
+      </div>
     </div>
   </div>
 </div>
