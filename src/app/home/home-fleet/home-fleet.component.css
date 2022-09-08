@@ -1,0 +1,9 @@
+.container-fluid {
+  background-color: var(--dark);
+  color: var(--white);
+  height: 300px;
+}
+
+.col-md-3 {
+  text-align: center;
+}

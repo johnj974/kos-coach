@@ -13,7 +13,8 @@ export class FleetService {
 
   fleetArray: BusModel[] = [
     new BusModel('Mercedes', 'Big Bus', 'another-white-bus', 2003),
-    new BusModel('Mercedes', 'Big Bus', 'white-bus', 2003),
+    new BusModel('Ford', 'Big Bus', 'white-bus', 2003),
+    new BusModel('Scania', 'Big Bus', 'grey-bus', 2003),
     new BusModel('Mercedes', 'Big Bus', 'grey-bus', 2003),
   ];
   constructor() {}
